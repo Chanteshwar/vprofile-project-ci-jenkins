@@ -162,13 +162,17 @@
         </plugins>
     </build>
 	<repositories>
-		<repository>
-        <id>tomcat</id>
-        <url>http://50.18.31.73:8080/</url>
-    </repository>
+		
     <repository>
       <id>${NEXUS-GRP-REPO}</id>
       <url>http://${NEXUSIP}:${NEXUSPORT}/repository/${NEXUS-GRP-REPO}/</url>
     </repository>
   </repositories>
+	<distributionManagement>
+    <repository>
+        <id>tomcat</id>
+        <url>http://50.18.31.73:8080/</url>
+    </repository>
+</distributionManagement>
+
 </project>
